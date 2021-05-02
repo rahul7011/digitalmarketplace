@@ -2,7 +2,7 @@
 
 {% block breadcrumb %}
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb alert alert-secondary">
+  <ol class="breadcrumb alert alert-secondary p-2">
     <li class="breadcrumb-item "><a href="{% url 'books:book-list' %}">Book List</a></li>
     <li class="breadcrumb-item "><a href="{{exercise.chapter.book.get_absolute_url}}">{{exercise.chapter.book.title}}</a></li>
     <li class="breadcrumb-item "><a href="{{exercise.chapter.get_absolute_url}}">Chapter {{exercise.chapter.chapter_number}}</a></li>

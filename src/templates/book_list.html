@@ -1,17 +1,30 @@
-{% extends 'base.html' %}   
+{% extends 'base.html' %}
 
 {% block breadcrumb %}
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb alert alert-secondary">
-    <li class="breadcrumb-item active" aria-current="page" >Book List</li>
+  <ol class="breadcrumb alert alert-secondary p-2">
+    <li class="breadcrumb-item active p-0" aria-current="page">Book List</li>
   </ol>
 </nav>
 {% endblock breadcrumb %}
 
 {% block content %}
 <h1>This is the book list page</h1>
-    {% for book in queryset %}
-        <p><a href="{{book.get_absolute_url}}">{{book}}</a></p>
+{% for book in queryset %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{book.title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{book.publication_date}}</h6>
+    {% for author in book.author.all %}
+    <p class="card-text">
+      <span>{{author}}</span>
+      {% if book.author.count > 1 %}|{% endif %}
+    </p>
     {% endfor %}
+    <a href="{{book.get_absolute_url}}" class="card-link">{{book}}</a>
+  </div>
+</div>
+
+{% endfor %}
 
 {% endblock content %}

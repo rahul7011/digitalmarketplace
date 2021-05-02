@@ -3,7 +3,7 @@
 {% block breadcrumb %}
 
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb alert alert-secondary">
+  <ol class="breadcrumb alert alert-secondary p-2">
     <li class="breadcrumb-item "><a href="{% url 'books:book-list' %}">Book List</a></li>
     <li class="breadcrumb-item active" aria-current="page">{{book.title}}</li>
   </ol>
