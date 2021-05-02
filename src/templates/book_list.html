@@ -3,7 +3,7 @@
 {% block breadcrumb %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb alert alert-secondary">
-    <li class="breadcrumb-item" aria-current="page" ><a href="{% url 'books:book-list' %}">Book List</a></li>
+    <li class="breadcrumb-item active" aria-current="page" >Book List</li>
   </ol>
 </nav>
 {% endblock breadcrumb %}
@@ -11,7 +11,7 @@
 {% block content %}
 <h1>This is the book list page</h1>
     {% for book in queryset %}
-        <p><a href="{% url 'books:book-detail' book.slug %}">{{book}}</a></p>
+        <p><a href="{{book.get_absolute_url}}">{{book}}</a></p>
     {% endfor %}
 
 {% endblock content %}

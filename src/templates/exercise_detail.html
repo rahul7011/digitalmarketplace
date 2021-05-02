@@ -4,8 +4,8 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb alert alert-secondary">
     <li class="breadcrumb-item "><a href="{% url 'books:book-list' %}">Book List</a></li>
-    <li class="breadcrumb-item "><a href="{% url 'books:book-detail' exercise.chapter.book.slug %}">{{exercise.chapter.book.title}}</a></li>
-    <li class="breadcrumb-item "><a href="{% url 'books:chapter-detail' exercise.chapter.book.slug exercise.chapter.chapter_number %}">Chapter {{exercise.chapter.chapter_number}}</a></li>
+    <li class="breadcrumb-item "><a href="{{exercise.chapter.book.get_absolute_url}}">{{exercise.chapter.book.title}}</a></li>
+    <li class="breadcrumb-item "><a href="{{exercise.chapter.get_absolute_url}}">Chapter {{exercise.chapter.chapter_number}}</a></li>
     <li class="breadcrumb-item active" aria-current="page" >Exercise {{exercise.exercise_number}}</li>
   </ol>
 </nav>
