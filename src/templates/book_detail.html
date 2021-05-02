@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block breadcrumb %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb alert alert-secondary">
+    <li class="breadcrumb-item "><a href="{% url 'books:book-list' %}">Book List</a></li>
+    <li class="breadcrumb-item active" aria-current="page">{{book.title}}</li>
+  </ol>
+</nav>
+
+{% endblock breadcrumb %}
+
+{% block content %}
+<h1>This is the book detail page</h1>
+{{book.title}}
+<h3>Chapters:</h3>
+<ul>
+  {% for chapter in book.chapter_set.all %}
+  <li>
+    <a href="{% url 'books:chapter-detail' book.slug chapter.chapter_number %}">{{chapter.title}}</a>
+  </li>
+</ul>
+{% endfor %}
+{% endblock content%}

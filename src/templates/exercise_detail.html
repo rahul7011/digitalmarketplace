@@ -1,0 +1,22 @@
+{% extends 'base.html' %}   
+
+{% block breadcrumb %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb alert alert-secondary">
+    <li class="breadcrumb-item "><a href="{% url 'books:book-list' %}">Book List</a></li>
+    <li class="breadcrumb-item "><a href="{% url 'books:book-detail' exercise.chapter.book.slug %}">{{exercise.chapter.book.title}}</a></li>
+    <li class="breadcrumb-item "><a href="{% url 'books:chapter-detail' exercise.chapter.book.slug exercise.chapter.chapter_number %}">Chapter {{exercise.chapter.chapter_number}}</a></li>
+    <li class="breadcrumb-item active" aria-current="page" >Exercise {{exercise.exercise_number}}</li>
+  </ol>
+</nav>
+
+{% endblock breadcrumb %}
+
+{% block content %}
+
+<h1>This is the exercise detail page</h1>
+    <strong>{{exercise.title}}</strong>
+<p>This exercise is brought to you by:<strong>{{exercise.chapter.title}}</strong></p>
+<p>This chapter is brought to you by:<strong>{{exercise.chapter.book.title}}</strong></p>
+
+{% endblock content %}
