@@ -138,5 +138,6 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL='/'
+ACCOUNT_EMAIL_VERIFICATION='none'   #so that we dont get an error while signing-up
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'

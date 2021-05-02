@@ -1,5 +1,7 @@
 from django.db import models
+from django.conf import settings
 from django.shortcuts import redirect, reverse
+from django.db.models.signals import post_save
 
 # Create your models here.
 '''
@@ -20,6 +22,27 @@ from django.shortcuts import redirect, reverse
     Author 2
     ...
 '''
+#this model will store the userlibrary
+class UserLibrary(models.Model):
+    books=models.ManyToManyField('Book')
+    user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.user.username
+    
+    def book_list(self):
+        return self.books.all() #this will fetch all the books related(bought/Access) to the user
+
+    class Meta:
+        verbose_name="User Library"
+        verbose_name_plural="User Library"
+
+#this will assign users to User library model,thats why we are using signals to 
+#tell the django to link a user to User Library automatically
+def post_user_signup_receiver(sender,instance,created,*args,**kwargs):
+    if created:
+        UserLibrary.objects.get_or_create(user=instance)
+post_save.connect(post_user_signup_receiver,sender=settings.AUTH_USER_MODEL)   
 
 
 class Author(models.Model):

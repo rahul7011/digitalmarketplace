@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block breadcrumb %}
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb alert alert-secondary p-2">
@@ -41,6 +41,7 @@
         Solutions:
       </div>
     </div>
+    {% if exercise.chapter.book in request.user.userlibrary.book_list %}
 
     {% for solution in exercise.solution_set.all %}
     <div class="accordion" id="accordion{{solution.solution_number}}">
@@ -64,9 +65,25 @@
     </div>
     {% endfor %}
 
+    {% else %}
+    <div class="accordion" id="AE">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="HO">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#CO"
+            aria-expanded="true" aria-controls="CO">
+            <strong><a href="#" class="" style="text-decoration:none" ><span class="badge bg-danger">Pay</span> To unlock Solutions</a></strong>
+          </button>
+        </h2>
+        <div id="CO" class="accordion-collapse collapse show" aria-labelledby="HO" data-bs-parent="#AE">
+          <div class="accordion-body">
+            <img src="{% static 'images/purchase.jpg' %}" class="img-fluid max-width: 100% height:auto">
+          </div>
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+
 
   </div>
-
-
-</div>
-{% endblock content %}
+  {% endblock content %}
