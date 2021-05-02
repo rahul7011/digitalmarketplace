@@ -83,7 +83,9 @@ class Exercise(models.Model):
     
 class Solution(models.Model):
     excercise = models.ForeignKey(Exercise, on_delete=models.CASCADE)
+    solution_number = models.IntegerField()
     image = models.ImageField()
+
 
     def __str__(self):
         return f"{self.excercise}-{self.pk}"

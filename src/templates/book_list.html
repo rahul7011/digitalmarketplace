@@ -10,21 +10,25 @@
 
 {% block content %}
 <h1>This is the book list page</h1>
-{% for book in queryset %}
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">{{book.title}}</h5>
-    <h6 class="card-subtitle mb-2 text-muted">{{book.publication_date}}</h6>
-    {% for author in book.author.all %}
-    <p class="card-text">
-      <span>{{author}}</span>
-      {% if book.author.count > 1 %}|{% endif %}
-    </p>
-    {% endfor %}
-    <a href="{{book.get_absolute_url}}" class="card-link">{{book}}</a>
+<div class="row">
+  {% for book in queryset %}
+  <div class="col-md-6">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{book.title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{book.publication_date}}</h6>
+        {% for author in book.author.all %}
+        <p class="card-text">
+          <span>{{author}}</span>
+          {% if book.author.count > 1 %}|{% endif %}
+        </p>
+        {% endfor %}
+        <a href="{{book.get_absolute_url}}" class="card-link">{{book}}</a>
+      </div>
+    </div>
   </div>
+  {% endfor %}
 </div>
 
-{% endfor %}
 
 {% endblock content %}
