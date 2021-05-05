@@ -21,17 +21,7 @@
 
   <div class=col-md-6>
 
-    <div class="card">
-      <div class="card-header">
-        {{exercise.chapter.book.title}}
-      </div>
-      <img class="card-img-top" src="{{exercise.chapter.book.cover.url}}" alt="Card image cap">
-      <div class="card-body">
-        <p class="card-text">
-          {{exercise.chapter.book.publication_date}}
-        </p>
-      </div>
-    </div>
+    {% include "book_snippet.html" with book=exercise.chapter.book %}
 
   </div>
 
@@ -41,7 +31,7 @@
         Solutions:
       </div>
     </div>
-    {% if exercise.chapter.book in request.user.userlibrary.book_list %}
+    {% if book_status == 'owned' %}
 
     {% for solution in exercise.solution_set.all %}
     <div class="accordion" id="accordion{{solution.solution_number}}">
