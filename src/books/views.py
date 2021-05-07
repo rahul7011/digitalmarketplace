@@ -1,3 +1,4 @@
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404
 from .models import Book, Chapter, Exercise
 from django.http import Http404
@@ -12,7 +13,7 @@ NOT_IN_CART = 'not_in_cart'
 def check_book_relationship(request,book):
     if book in request.user.userlibrary.book_list():
         return OWNED
-    order_qs = Order.objects.filter(user=request.user)
+    order_qs = Order.objects.filter(user=request.user,is_ordered=False)
     if order_qs.exists():
         order=order_qs[0]
         order_item_qs=OrderItem.objects.filter(book=book)
@@ -30,7 +31,7 @@ def book_list(request):
     }
     return render(request, "book_list.html", context)
 
-
+@login_required
 def book_detail(request, slug):
     # display the list of chapters in this book
     book = get_object_or_404(Book, slug=slug)
@@ -41,7 +42,7 @@ def book_detail(request, slug):
     }
     return render(request, "book_detail.html", context)
 
-
+@login_required
 def chapter_detail(request, book_slug, chapter_number):
     # book_slug is the telling which book is used
     # currently and chapter_number is used to find the current chapter
@@ -57,6 +58,7 @@ def chapter_detail(request, book_slug, chapter_number):
         return render(request,"chapter_detail.html",context)
     raise Http404 
 
+@login_required
 def exercise_detail(request, book_slug, chapter_number,exercise_number):
     exercise_qs=Exercise.objects.filter(chapter__book__slug=book_slug)\
     .filter(chapter__chapter_number=chapter_number)\
