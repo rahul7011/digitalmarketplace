@@ -145,5 +145,5 @@ ACCOUNT_EMAIL_VERIFICATION='none'   #so that we dont get an error while signing-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 #stripe
-STRIPE_PUBLISH_KEY='pk_test_51InPsgC8JabB5fgr0VAZTX1zmRThzP27N7VbxGJxzYqFZ8jemKdqAfHYuaIWmp10hbtRYBWgjPeUboPfCRzKKB7j00XZDRjTmg'
-STRIPE_SECRET_KEY='sk_test_51InPsgC8JabB5fgrycwGhHmYcmhPELifpgFviatqsJok9XoLTrwhTlxjrCFTuI6aimN0Woe9uUUmEw9rpjjlbMZd00mJWS4TlJ'
+STRIPE_PUBLISH_KEY=''
+STRIPE_SECRET_KEY=''
