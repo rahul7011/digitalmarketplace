@@ -25,3 +25,17 @@ Watch Video [here](https://drive.google.com/file/d/1wX_psXKFKs6ZTNiALivflGuWXnNV
 1. Make sure you have a [Stripe](https://stripe.com/) account. You will need your test API keys which you can find on your dashboard.
 2. Create a virtualenv with `virtualenv env`
 3. Install dependencies with `pip install -r requirements.txt`
+
+## Screenshots
+<table>
+ <tr>
+  <td>
+   <img width="420" alt="DMP1" src="https://user-images.githubusercontent.com/52202163/119264480-06ccb400-bc01-11eb-955b-37430edf8c30.png">
+   <img width="420" alt="DMP2" src="https://user-images.githubusercontent.com/52202163/119264946-a3dc1c80-bc02-11eb-93de-ea9521bdc495.png">
+   <img width="420" alt="DMP3" src="https://user-images.githubusercontent.com/52202163/119264490-0d5b2b80-bc01-11eb-9044-db0834b529a2.png">
+   <img width="420" alt="DMP4" src="https://user-images.githubusercontent.com/52202163/119264491-0df3c200-bc01-11eb-865e-6964615ca7c0.png">
+   <td/>
+  <tr/>
+ </table>
+
+
