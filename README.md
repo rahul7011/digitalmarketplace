@@ -1,4 +1,3 @@
-
 # Django Digital Marketplace:desktop_computer::moneybag:
 
 This is a digital marketplace website built with Django. The website displays electronic products, focussing on e-book textbooks. Users can add and remove products to/from their cart, and purchase access to the solutions provided by each book. Payments are handled with Stripe.
@@ -31,7 +30,7 @@ Watch Video [here](https://drive.google.com/file/d/1wX_psXKFKs6ZTNiALivflGuWXnNV
  <tr>
   <td>
    <img width="420" alt="DMP1" src="https://user-images.githubusercontent.com/52202163/119264480-06ccb400-bc01-11eb-955b-37430edf8c30.png">
-   <img width="420" alt="DMP2" src="https://user-images.githubusercontent.com/52202163/119264946-a3dc1c80-bc02-11eb-93de-ea9521bdc495.png">
+   <img width="420" alt="DMP2" src="https://user-images.githubusercontent.com/52202163/119265113-3381cb00-bc03-11eb-9585-cab1384111e5.png">
    <img width="420" alt="DMP3" src="https://user-images.githubusercontent.com/52202163/119264490-0d5b2b80-bc01-11eb-9044-db0834b529a2.png">
    <img width="420" alt="DMP4" src="https://user-images.githubusercontent.com/52202163/119264491-0df3c200-bc01-11eb-865e-6964615ca7c0.png">
    <td/>
