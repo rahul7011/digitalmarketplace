@@ -33,15 +33,30 @@ https://user-images.githubusercontent.com/52202163/119267082-dee24e00-bc0a-11eb-
   </td>
   <td>
    <img width="420" alt="DM2" src="https://user-images.githubusercontent.com/52202163/119267157-0cc79280-bc0b-11eb-8c29-8bb8b837c83c.png">
-     </td>
-<!--   <td> -->
-<!--    <img width="420" alt="DM3" src="https://user-images.githubusercontent.com/52202163/119267162-0f29ec80-bc0b-11eb-81c6-95f03abfd7ae.png">
+  </td>
+ </tr>
+ <tr>
+  <td>
+   <img width="420" alt="DM3" src="https://user-images.githubusercontent.com/52202163/119267162-0f29ec80-bc0b-11eb-81c6-95f03abfd7ae.png">
+   </td>
+  <td>
    <img width="420" alt="DM4" src="https://user-images.githubusercontent.com/52202163/119267165-105b1980-bc0b-11eb-9c54-d13b9edf36b4.png">
+     </td>
+ </tr>
+ <tr>
+  <td>
    <img width="420" alt="DM5" src="https://user-images.githubusercontent.com/52202163/119267167-10f3b000-bc0b-11eb-894b-dfe4aaaef924.png">
+     </td>
+  <td>
    <img width="420" alt="DM6" src="https://user-images.githubusercontent.com/52202163/119267168-118c4680-bc0b-11eb-8c0e-c805defbd422.png">
+     </td>
+ </tr>
+ <tr>
+  <td>
    <img width="420" alt="DM7" src="https://user-images.githubusercontent.com/52202163/119267169-1224dd00-bc0b-11eb-9b8a-a8ddf3aef35d.png">
-   <img width="420" alt="DM8" src="https://user-images.githubusercontent.com/52202163/119267171-12bd7380-bc0b-11eb-919f-2b9355c3de20.png"> -->
-
+     </td>
+  <td>
+   <img width="420" alt="DM8" src="https://user-images.githubusercontent.com/52202163/119267171-12bd7380-bc0b-11eb-919f-2b9355c3de20.png">
   </td>
  </tr>
 </table>
