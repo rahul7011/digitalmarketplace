@@ -4,11 +4,12 @@ This is a digital marketplace website built with Django. The website displays el
 
 ![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)   ![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)
 
-
-![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=python,django,js,html,css,vscode" />
+  </a>
+</p>
  
- 
-  ![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg) ![forthebadge](https://forthebadge.com/images/badges/for-you.svg)
 ## Features
 * Integrated django-allauth package for Login,SignUp Authentication process .
 * Integrated django-crispy-forms for the management of django forms.
